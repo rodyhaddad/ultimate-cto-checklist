@@ -24,7 +24,7 @@ const contentHtml = await marked.parse(command.content);
 <BaseLayout title={`/${command.name}`} description={command.description}>
   <div class="flex min-h-screen">
     <ChecklistSidebar currentSlug="commands" />
-    <main class="flex-1 py-8 px-8 max-w-4xl">
+    <main class="flex-1 min-w-0 py-6 px-4 sm:py-8 sm:px-8 max-w-4xl">
 
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-sm text-gray-400 mb-6">

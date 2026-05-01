@@ -10,11 +10,11 @@ const stats = computeStats(sections);
 <BaseLayout title="Getting Started" description="How to run your first audit using the Ultimate CTO Checklist. From setup to report in under an hour.">
   <div class="flex min-h-screen">
     <ChecklistSidebar currentSlug="getting-started" />
-    <main class="flex-1 py-8 px-8 max-w-3xl">
+    <main class="flex-1 min-w-0 py-6 px-4 sm:py-8 sm:px-8 max-w-3xl">
 
       <div class="mb-10">
         <p class="text-xs uppercase tracking-widest text-[#16a34a] font-bold mb-2">Getting Started</p>
-        <h1 class="text-3xl font-black text-gray-900 tracking-tight mb-3">
+        <h1 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-3">
           Run your first audit
         </h1>
         <p class="text-gray-500 max-w-2xl">
@@ -227,8 +227,8 @@ claude   # launch Claude Code
 
         <!-- Setup -->
         <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 mt-6">Setup</h3>
-        <div class="border border-gray-100 rounded-lg overflow-hidden mb-4">
-          <table class="w-full text-sm">
+        <div class="border border-gray-100 rounded-lg overflow-hidden mb-4 overflow-x-auto">
+          <table class="w-full text-sm min-w-[480px]">
             <tbody class="divide-y divide-gray-50">
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-tutorial</td><td class="px-4 py-2.5 text-gray-600">Interactive first-time walkthrough. Detects your setup state and explains concepts before you start.</td></tr>
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-init</td><td class="px-4 py-2.5 text-gray-600">One-time org setup. Asks about cloud providers, tooling, and infrastructure, then generates <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">org.yaml</code> and supporting docs.</td></tr>
@@ -239,8 +239,8 @@ claude   # launch Claude Code
 
         <!-- Running audits -->
         <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Running audits</h3>
-        <div class="border border-gray-100 rounded-lg overflow-hidden mb-4">
-          <table class="w-full text-sm">
+        <div class="border border-gray-100 rounded-lg overflow-hidden mb-4 overflow-x-auto">
+          <table class="w-full text-sm min-w-[480px]">
             <tbody class="divide-y divide-gray-50">
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-start</td><td class="px-4 py-2.5 text-gray-600">Begin a new audit. Pick a flow (sequential, priority, section, or free-form), then auto-check runs in parallel.</td></tr>
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-continue</td><td class="px-4 py-2.5 text-gray-600">Resume an interrupted audit. Recovers state from <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">.audit-state.yaml</code> and picks up where you left off.</td></tr>
@@ -253,8 +253,8 @@ claude   # launch Claude Code
 
         <!-- Results & reporting -->
         <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Results & reporting</h3>
-        <div class="border border-gray-100 rounded-lg overflow-hidden mb-4">
-          <table class="w-full text-sm">
+        <div class="border border-gray-100 rounded-lg overflow-hidden mb-4 overflow-x-auto">
+          <table class="w-full text-sm min-w-[480px]">
             <tbody class="divide-y divide-gray-50">
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-summary</td><td class="px-4 py-2.5 text-gray-600">Generate a full report: overall score, section breakdown, action items, and regressions from the previous audit.</td></tr>
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-diff</td><td class="px-4 py-2.5 text-gray-600">Compare two audits side by side. Highlights improvements, regressions, and items still failing.</td></tr>
@@ -265,8 +265,8 @@ claude   # launch Claude Code
 
         <!-- Managing findings -->
         <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Managing findings</h3>
-        <div class="border border-gray-100 rounded-lg overflow-hidden">
-          <table class="w-full text-sm">
+        <div class="border border-gray-100 rounded-lg overflow-hidden overflow-x-auto">
+          <table class="w-full text-sm min-w-[480px]">
             <tbody class="divide-y divide-gray-50">
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-fix</td><td class="px-4 py-2.5 text-gray-600">Work through failed and partial items interactively. Gather better evidence, resolve findings, or create waivers.</td></tr>
               <tr><td class="px-4 py-2.5 font-mono text-xs text-[#16a34a] w-40 align-top">/audit-skip</td><td class="px-4 py-2.5 text-gray-600">Skip an item with documented reasoning. Marked for later revisit, not permanently excluded.</td></tr>

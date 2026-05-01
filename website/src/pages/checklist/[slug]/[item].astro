@@ -59,9 +59,9 @@ const crossRefs = (item.crossReferences ?? []).map(refId => {
 <BaseLayout title={`${item.id}: ${item.title}`} description={item.description}>
   <div class="flex min-h-screen">
     <ChecklistSidebar currentSlug={section.slug} />
-    <main class="flex-1 py-8 px-8 max-w-4xl">
+    <main class="flex-1 min-w-0 py-6 px-4 sm:py-8 sm:px-8 max-w-4xl">
       <!-- Breadcrumb -->
-      <nav class="flex items-center gap-2 text-sm text-gray-400 mb-6">
+      <nav class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-400 mb-6">
         <a href="/checklist/" class="hover:text-[#16a34a] transition-colors">Checklist</a>
         <span>/</span>
         <a href={`/checklist/${section.slug}/`} class="hover:text-[#16a34a] transition-colors">{section.name}</a>
@@ -76,7 +76,7 @@ const crossRefs = (item.crossReferences ?? []).map(refId => {
           <SeverityBadge severity={item.severity} />
           <span class="text-xs text-gray-400 font-mono">{item.category}</span>
         </div>
-        <h1 class="text-3xl font-black text-gray-900 tracking-tight mb-3">{item.title}</h1>
+        <h1 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-3">{item.title}</h1>
         {item.description && (
           <p class="text-gray-500 text-lg leading-relaxed">{item.description}</p>
         )}
@@ -180,7 +180,7 @@ const crossRefs = (item.crossReferences ?? []).map(refId => {
             prose-li:text-gray-600
             prose-p:text-gray-600
             prose-a:text-[#16a34a] prose-a:no-underline hover:prose-a:underline
-            border border-gray-200 rounded-lg p-6"
+            border border-gray-200 rounded-lg p-4 sm:p-6"
             set:html={itemGuideHtml}
           />
         </div>

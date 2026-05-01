@@ -36,7 +36,7 @@ const nextSection = sectionIndex < allSections.length - 1 ? allSections[sectionI
 <BaseLayout title={section.name} description={section.description}>
   <div class="flex min-h-screen">
     <ChecklistSidebar currentSlug={section.slug} />
-    <main class="flex-1 py-8 px-8 max-w-4xl">
+    <main class="flex-1 min-w-0 py-6 px-4 sm:py-8 sm:px-8 max-w-4xl">
       <SectionHeader section={section} />
 
       {guideIntroHtml && (
